@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TestChat.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TestChat"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="True"
+    Title="TestChat">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <Image Source="dotnet_bot.png" WidthRequest="206"/>
+            <Label Text="Crashou PetShop" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <Label Text="Copyright Carlos, M." HorizontalOptions="Center"/>
+    </Shell.FlyoutFooter>
+    <FlyoutItem Title="Menu" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Especies Pet" ContentTemplate="{DataTemplate local:EspeciesPage}"/>
+        <ShellContent Title="Cadastro Animal" ContentTemplate="{DataTemplate local:AnimalPage}"/>
+        <ShellContent Title="Cadastro Clientes" ContentTemplate="{DataTemplate local:ClientesPage}"/>
+    </FlyoutItem>
+</Shell>

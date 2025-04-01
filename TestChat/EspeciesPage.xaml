@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestChat.EspeciesPage"
+             Title="EspeciesPage">
+    <StackLayout Padding="10">
+        <Label Text="Nome da Espécie:" />
+        <Entry x:Name="EspecieNomeEntry" Placeholder="Nome da Espécie" />
+
+        <Label Text="Descrição:" />
+        <Editor x:Name="EspecieDescricaoEditor" />
+
+        <Button x:Name="btnAddEspecie" Text="Adicionar Espécie" Clicked="OnAddEspeciesClicked"/>
+        <Button x:Name="btnUpdate" Text="Atualizar Espécie" Clicked="OnUpdateEspeciesClicked"/>
+        <Button x:Name="btnDelete" Text="Deletar Espécie" Clicked="OnDeleteEspeciesClicked"/>
+
+        <ListView x:Name="EspeciesListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nome}" Detail="{Binding Descricao}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

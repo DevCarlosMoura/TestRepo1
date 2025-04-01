@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestChat.AnimalPage"
+             Title="ID Pet">
+
+        <StackLayout Padding="10">
+            <Label Text="Nome do Animal:" />
+            <Entry x:Name="NomeEntry" Placeholder="Nome do Animal" />
+
+            <Label Text="Data de Nascimento:" />
+            <DatePicker x:Name="NascimentoDatePicker" />
+
+            <Label Text="Apelido:" />
+            <Entry x:Name="ApelidoEntry" Placeholder="Apelido" />
+
+            <Label Text="ID do Cliente:" />
+            <Entry x:Name="ClienteIdEntry" Placeholder="ID do Cliente" />
+
+            <Label Text="Observações:" />
+            <Editor x:Name="ObservacoesEditor" />
+
+            <Button Text="Adicionar Animal" Clicked="OnAddAnimalClicked"/>
+            <Button Text="Atualizar Animal" Clicked="OnUpdateAnimalClicked"/>
+            <Button Text="Deletar Animal" Clicked="OnDeleteAnimalClicked"/>
+
+        <ListView x:Name="AnimalsListView" ItemSelected="OnAnimalSelected">
+            <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nome}" Detail="{Binding Apelido}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>

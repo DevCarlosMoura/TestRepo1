@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestChat.ClientesPage"
+             Title="ClientesPage">
+    <StackLayout Padding="10">
+        <Label Text="Nome do Cliente:" />
+        <Entry x:Name="ClienteNomeEntry" Placeholder="Nome do Cliente" />
+
+        <Label Text="E-mail:" />
+        <Entry x:Name="ClienteEmailEntry" Placeholder="E-mail" />
+
+        <Label Text="CPF:" />
+        <Entry x:Name="ClienteCpfEntry" Placeholder="CPF" />
+
+        <Label Text="Data de Cadastro:" />
+        <DatePicker x:Name="ClienteCadastroDatePicker" />
+
+        <Label Text="ID do Pet:" />
+        <Entry x:Name="ClientePetIdEntry" Placeholder="ID do Pet" />
+
+        <Button Text="Adicionar Cliente" Clicked="OnAddClienteClicked"/>
+        <Button Text="Atualizar Cliente" Clicked="OnUpdateClienteClicked"/>
+        <Button Text="Deletar Cliente" Clicked="OnDeleteClienteClicked"/>
+
+        <ListView x:Name="ClientesListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nome}" Detail="{Binding Email}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
