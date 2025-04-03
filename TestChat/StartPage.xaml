@@ -1,0 +1,61 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestChat.StartPage"
+             Title="Pagina Inicial" BackgroundColor="#8dd67a" IconImageSource="americanbully.png">
+    <ScrollView>
+        <Grid Padding="20" ColumnSpacing="20" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Image Source="americanbully.png"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="4"
+                   HeightRequest="100"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
+
+
+            <Label Text="Bem-Vindos(as) a Creshou PetShop!"
+                   Style="{StaticResource Headline}"
+                   FontSize="Large"
+                   FontFamily="arial"
+                   TextColor="#070F54"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="4"
+                   HorizontalOptions="Center" />
+
+
+            <Label Text="A aplicação ideal para você e seu pet!"
+                   Style="{StaticResource SubHeadline}"
+                   FontSize="Small"
+                   TextColor="#070F54"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="4"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Cadastro de Clientes" TextColor="#070F54" Grid.Row="3" Grid.ColumnSpan="4" BackgroundColor="#007AFF" Clicked="OnCadastroClicked"/>
+            <Button Text="Cadastro de Animais" TextColor="#070F54" Grid.Row="4" Grid.ColumnSpan="4" BackgroundColor="#007AFF" Clicked="OnIDpetClicked"/>
+            <Button Text="Especies Pet" TextColor="#070F54" Grid.Row="5" Grid.ColumnSpan="4" BackgroundColor="#007AFF" Clicked="OnEspeciesClicked"/>
+            <Button Text="Pagina de Ajuda" TextColor="#070F54" Grid.Row="6" Grid.ColumnSpan="4" BackgroundColor="#007AFF" Clicked="OnHelpPageClicked"/>
+            <Button Text="Informacoes" TextColor="#070F54" Grid.Row="7" Grid.ColumnSpan="4" BackgroundColor="#007AFF" Clicked="OnInfoPageClicked"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

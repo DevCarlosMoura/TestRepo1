@@ -1,19 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TestChat.MainPage">
+             x:Class="TestChat.MainPage"
+             Title="Login" BackgroundColor="#8dd67a" IconImageSource="dobermanmenu.png">
 
-    <StackLayout Padding="30" VerticalOptions="Center">
+    <StackLayout Padding="15" Spacing="20" VerticalOptions="Center">
 
-        <Image Source="dotnet_bot.png" HeightRequest="120" HorizontalOptions="Center"/>
+        <Image Source="dobermanhome.png" HeightRequest="120" HorizontalOptions="Center"/>
 
-        <Entry x:Name="EmailEntry" Placeholder="E-mail" Keyboard="Email" BackgroundColor="White"/>
+        <Entry x:Name="EmailEntry" PlaceholderColor="#070F54" Placeholder="E-mail" Keyboard="Email" BackgroundColor="#95c987"/>
 
-        <Entry x:Name="PasswordEntry" Placeholder="Senha" IsPassword="True" BackgroundColor="White"/>
+        <Entry x:Name="PasswordEntry" PlaceholderColor="#070F54"  Placeholder="Senha" IsPassword="True" BackgroundColor="#95c987"/>
 
-        <Button Text="Entrar" TextColor="White" BackgroundColor="#007AFF"/>
+        <Label x:Name="TextCheckBox" Text="Lembrar senha?"/>
+        <CheckBox x:Name="chkLembrarSenha" />
 
-        <Label Text="Esqueci minha senha" HorizontalOptions="Center" TextColor="#007AFF" FontSize="Medium" 
+        <Button Text="Entrar" TextColor="#070F54" BackgroundColor="#fa9f42" FontSize="Small" Clicked="OnEntryClicked"/>
+
+        <Button x:Name="HelpBtn" Text="Ajuda" TextColor="#070F54" BackgroundColor="#ce3a23" FontSize="Small" Clicked="OnAjudaClicked"/>
+
+        <Label Text="Esqueci minha senha" HorizontalOptions="Center" TextColor="#070F54" FontSize="Micro" 
                Margin="0,10,0,0"/>
 
     </StackLayout>

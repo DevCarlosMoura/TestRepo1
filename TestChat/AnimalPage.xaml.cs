@@ -1,4 +1,4 @@
-using Android.Content.Res;
+using System;
 
 namespace TestChat;
 

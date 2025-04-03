@@ -1,0 +1,13 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestChat.HelpPage"
+             Title="Pagina de Ajuda" BackgroundColor="#8dd67a" IconImageSource="atendimento.png">
+    <VerticalStackLayout>
+        <Label 
+            Text="PAGINA DE AJUDA !!!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            TextColor="Gray"/>
+        <Label Text="Nesta pagina iremos auxiliar nosso futuros clientes, teremos um chat exclusivo para contato com suporte." TextColor="Gray"/>
+    </VerticalStackLayout>
+</ContentPage>

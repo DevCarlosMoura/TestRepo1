@@ -2,17 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TestChat.EspeciesPage"
-             Title="EspeciesPage">
-    <StackLayout Padding="10">
-        <Label Text="Nome da Espécie:" />
+             Title="EspeciesPage" BackgroundColor="#8dd67a">
+    <StackLayout Padding="20" Spacing="20">
+        <Label Text="Nome da Espécie:" TextColor="#070F54"/>
         <Entry x:Name="EspecieNomeEntry" Placeholder="Nome da Espécie" />
-
-        <Label Text="Descrição:" />
-        <Editor x:Name="EspecieDescricaoEditor" />
-
-        <Button x:Name="btnAddEspecie" Text="Adicionar Espécie" Clicked="OnAddEspeciesClicked"/>
-        <Button x:Name="btnUpdate" Text="Atualizar Espécie" Clicked="OnUpdateEspeciesClicked"/>
-        <Button x:Name="btnDelete" Text="Deletar Espécie" Clicked="OnDeleteEspeciesClicked"/>
+        <Label Text="Descrição:" TextColor="#070F54"/>
+        <Editor x:Name="EspecieDescricaoEditor"/>
+        <Button x:Name="btnAddEspecies" Text="Adicionar Especies" BackgroundColor="#5acec9" TextColor="#070F54"/>
+        <Button x:Name="btnUpdate" Text="Atualizar Espécie" TextColor="#070F54" BackgroundColor="#5acec9"/>
+        <Button x:Name="btnDelete" Text="Deletar Espécie" TextColor="#070F54" BackgroundColor="#5acec9"/>
 
         <ListView x:Name="EspeciesListView">
             <ListView.ItemTemplate>

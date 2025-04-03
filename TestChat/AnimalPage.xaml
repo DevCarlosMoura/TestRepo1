@@ -2,34 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TestChat.AnimalPage"
-             Title="ID Pet">
+             Title="ID Pet" BackgroundColor="#8dd67a">
 
-        <StackLayout Padding="10">
-            <Label Text="Nome do Animal:" />
+        <StackLayout Padding="20" Spacing="20">
+        <Label Text="Nome do Animal:" TextColor="#070F54"/>
             <Entry x:Name="NomeEntry" Placeholder="Nome do Animal" />
 
-            <Label Text="Data de Nascimento:" />
+        <Label Text="Data de Nascimento:" TextColor="#070F54"/>
             <DatePicker x:Name="NascimentoDatePicker" />
 
-            <Label Text="Apelido:" />
+        <Label Text="Apelido:" TextColor="#070F54"/>
             <Entry x:Name="ApelidoEntry" Placeholder="Apelido" />
 
-            <Label Text="ID do Cliente:" />
+        <Label Text="ID do Cliente:" TextColor="#070F54"/>
             <Entry x:Name="ClienteIdEntry" Placeholder="ID do Cliente" />
 
-            <Label Text="Observações:" />
+        <Label Text="Observações:" TextColor="#070F54"/>
             <Editor x:Name="ObservacoesEditor" />
 
-            <Button Text="Adicionar Animal" Clicked="OnAddAnimalClicked"/>
-            <Button Text="Atualizar Animal" Clicked="OnUpdateAnimalClicked"/>
-            <Button Text="Deletar Animal" Clicked="OnDeleteAnimalClicked"/>
+        <Button Text="Adicionar Animal" TextColor="#070F54" Clicked="OnAddAnimalClicked" BackgroundColor="#5acec9"/>
+        <Button Text="Atualizar Animal" TextColor="#070F54" Clicked="OnUpdateAnimalClicked" BackgroundColor="#5acec9"/>
+        <Button Text="Deletar Animal" TextColor="#070F54" Clicked="OnDeleteAnimalClicked" BackgroundColor="#5acec9"/>
 
-        <ListView x:Name="AnimalsListView" ItemSelected="OnAnimalSelected">
-            <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding Nome}" Detail="{Binding Apelido}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
         </StackLayout>
     </ContentPage>

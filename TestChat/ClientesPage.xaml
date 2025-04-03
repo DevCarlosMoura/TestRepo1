@@ -2,33 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TestChat.ClientesPage"
-             Title="ClientesPage">
-    <StackLayout Padding="10">
-        <Label Text="Nome do Cliente:" />
-        <Entry x:Name="ClienteNomeEntry" Placeholder="Nome do Cliente" />
+             Title="ClientesPage" BackgroundColor="#8dd67a" IconImageSource="cliente.png">
+    <StackLayout>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Label Text="Nome do Cliente:" TextColor="#070F54" />
+            <Entry x:Name="ClienteNomeEntry" Placeholder="Nome do Cliente" />
 
-        <Label Text="E-mail:" />
-        <Entry x:Name="ClienteEmailEntry" Placeholder="E-mail" />
+            <Label Text="E-mail:" TextColor="#070F54" />
+            <Entry x:Name="ClienteEmailEntry" Placeholder="E-mail" />
 
-        <Label Text="CPF:" />
-        <Entry x:Name="ClienteCpfEntry" Placeholder="CPF" />
+            <Label Text="CPF:" TextColor="#070F54" />
+            <Entry x:Name="ClienteCpfEntry" Placeholder="CPF" />
 
-        <Label Text="Data de Cadastro:" />
-        <DatePicker x:Name="ClienteCadastroDatePicker" />
+            <Label Text="Data de Cadastro:" TextColor="#070F54" />
+            <DatePicker x:Name="ClienteCadastroDatePicker" TextColor="#070F54" />
 
-        <Label Text="ID do Pet:" />
-        <Entry x:Name="ClientePetIdEntry" Placeholder="ID do Pet" />
+            <Label Text="ID do Pet:" TextColor="#070F54" />
+            <Entry x:Name="ClientePetIdEntry" Placeholder="ID do Pet" />
 
-        <Button Text="Adicionar Cliente" Clicked="OnAddClienteClicked"/>
-        <Button Text="Atualizar Cliente" Clicked="OnUpdateClienteClicked"/>
-        <Button Text="Deletar Cliente" Clicked="OnDeleteClienteClicked"/>
-
-        <ListView x:Name="ClientesListView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Nome}" Detail="{Binding Email}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            <Button Text="Adicionar Cliente" TextColor="#070F54" Clicked="OnAddClienteClicked" BackgroundColor="#5acec9"/>
+            <Button Text="Atualizar Cliente" TextColor="#070F54" BackgroundColor="#5acec9"/>
+            <Button Text="Deletar Cliente" TextColor="#070F54" BackgroundColor="#5acec9"/>
+            </VerticalStackLayout>
     </StackLayout>
 </ContentPage>

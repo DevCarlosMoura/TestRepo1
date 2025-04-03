@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestChat.InfoPage"
+             Title="InfoPage" BackgroundColor="#8dd67a" IconImageSource="dragao.png">
+    <VerticalStackLayout>
+        <Label 
+            Text="SiS.Vet:Anchieta" TextColor="#070F54" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large"/>
+        <Image Source="dragao.png" HeightRequest="120" HorizontalOptions="Center"/>
+        <Label Text="Sistema Desenvolvido por:" TextColor="#070F54" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center"/> 
+        <Label 
+            Text="Carlos Eduardo Moura Pinheiro" TextColor="#070F54" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" />
+        <Label Text="RA:2400488" TextColor="#070F54" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Button Text="Voltar para Pagina Inicial" TextColor="#070F54" BackgroundColor="#007AFF" Clicked="OnStartPageClicked"/>
+    </VerticalStackLayout>
+</ContentPage>

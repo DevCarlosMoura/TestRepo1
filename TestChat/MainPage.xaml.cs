@@ -2,11 +2,17 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
-        public MainPage()
+       public MainPage()
         {
             InitializeComponent();
+        }
+    private async void OnEntryClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StartPage());
+        }
+    private async void OnAjudaClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HelpLogin());
         }
     }
 

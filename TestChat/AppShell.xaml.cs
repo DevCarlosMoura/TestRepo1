@@ -1,4 +1,6 @@
-﻿namespace TestChat
+﻿using System;
+
+namespace TestChat
 {
     public partial class AppShell : Shell
     {

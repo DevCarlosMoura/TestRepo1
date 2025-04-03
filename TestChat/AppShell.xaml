@@ -6,21 +6,32 @@
     xmlns:local="clr-namespace:TestChat"
     Shell.FlyoutBehavior="Flyout"
     Shell.TabBarIsVisible="True"
-    Title="TestChat">
+    Title="Sistema Veterinario"
+    BackgroundColor="#e1614d"
+    FlyoutBackgroundColor="#8dd67a">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Sistema Veterinario" TextColor="Black" FontSize="Header" FontFamily="Helvetica"/>
+        </StackLayout>
+    </Shell.TitleView>
 
     <Shell.FlyoutHeader>
-        <VerticalStackLayout>
-            <Image Source="dotnet_bot.png" WidthRequest="206"/>
-            <Label Text="Crashou PetShop" HorizontalOptions="Center"/>
+        <VerticalStackLayout BackgroundColor="#8dd67a">
+            <Image Source="bullterrier.png" WidthRequest="206"/>
+            <Label Text="Crashou PetShop" HorizontalOptions="Center" TextColor="#070F54"/>
         </VerticalStackLayout>
     </Shell.FlyoutHeader>
 
     <Shell.FlyoutFooter>
-        <Label Text="Copyright Carlos, M." HorizontalOptions="Center"/>
+        <Label Text="Copyright Carlos, M." HorizontalOptions="Center" TextColor="Black"/>
     </Shell.FlyoutFooter>
     <FlyoutItem Title="Menu" FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Especies Pet" ContentTemplate="{DataTemplate local:EspeciesPage}"/>
-        <ShellContent Title="Cadastro Animal" ContentTemplate="{DataTemplate local:AnimalPage}"/>
-        <ShellContent Title="Cadastro Clientes" ContentTemplate="{DataTemplate local:ClientesPage}"/>
+        <ShellContent Title="Login"  ContentTemplate="{DataTemplate local:MainPage}" Icon="dobermanmenu.png"/>
+        <ShellContent Title="Pagina Inicial" ContentTemplate="{DataTemplate local:StartPage}" Icon="americanbully.png"/>
+        <ShellContent Title="Cadastro Clientes" ContentTemplate="{DataTemplate local:ClientesPage}" Icon="cliente.png"/>
+        <ShellContent Title="Cadastro Animal" ContentTemplate="{DataTemplate local:AnimalPage}" Icon="goldenretriever.png"/>
+        <ShellContent Title="Especies Pet" ContentTemplate="{DataTemplate local:EspeciesPage}" Icon="especies.png"/>
+        <ShellContent Title="Pagina de Ajuda" ContentTemplate="{DataTemplate local:HelpPage}" Icon="atendimento.png"/>
+        <ShellContent Title="Infos" ContentTemplate="{DataTemplate local:InfoPage}" Icon="dragao.png"/>
     </FlyoutItem>
 </Shell>

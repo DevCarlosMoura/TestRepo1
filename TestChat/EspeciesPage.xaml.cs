@@ -1,5 +1,4 @@
-
-using System.Threading.Tasks;
+using System;
 
 namespace TestChat
 {
@@ -9,12 +8,7 @@ namespace TestChat
         {
             InitializeComponent();
         }
-        private async Task OnAddEspeciesClickedAsync(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new EspeciesPage());
-        }
-
-        private async Task OnDeleteEspecieClicked(object sender, EventArgs e)
+        private async void OnAddEspecieClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EspeciesPage());
         }
